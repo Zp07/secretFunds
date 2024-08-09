@@ -6,6 +6,7 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "scheme" : "secretFunds",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -28,6 +29,9 @@
         "projectId": "86e6c7cf-bf18-4679-b8e8-5452caec7045"
       }
     },
-    "owner": "zepta"
+    "owner": "zepta",
+    "plugins": [
+      "expo-router"
+    ]
   }
 }
