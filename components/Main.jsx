@@ -1,29 +1,25 @@
-import { Pressable, StyleSheet, Text, View } from "react-native";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { Logo } from "./Logo.jsx";
+import { View } from "react-native";
+import CardName from "./CardName";
+import CardTotal from "./CardTotal";
+import { Screen } from "./Screen";
+import RecentTransition from "./RecentTransitions";
 
-export function Main() {
-  const insets = useSafeAreaInsets();
+export default function Main() {
   return (
-    <View style={{ paddingTop: insets.top, paddingBottom: insets.bottom }}>
-      <View style={styles.containerLogo}>
-        <Logo />
-      </View>
-      <Text>Maneja tus finanzas en parjea</Text>
-      <Text>Mejora tu relacion</Text>
-      <Pressable>
-        <Text>Sign in</Text>
-      </Pressable>
-      <Pressable>
-        <Text>Sign Up</Text>
-      </Pressable>
-    </View>
+    <>
+      <Screen>
+        <View className="m-5">
+          <CardName />
+        </View>
+
+        <View className="m-5">
+          <CardTotal />
+        </View>
+
+        <View className="m-5">
+          <RecentTransition />
+        </View>
+      </Screen>
+    </>
   );
 }
-
-const styles = StyleSheet.create({
-  containerLogo: {
-    justifyContent: "center",
-    alignContent: "center",
-  },
-});

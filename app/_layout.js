@@ -1,10 +1,14 @@
-import { Slot } from "expo-router";
+import { Stack } from "expo-router";
 import { View, Text } from "react-native";
 
 export default function Layout() {
   return (
-    <View style={{ flex: 1, backgroundColor: "black" }}>
-      <Slot />
+    <View className="flex-1">
+      <Stack
+        screenOptions={{
+          headerShown: false,
+        }}
+      ></Stack>
     </View>
   );
 }
